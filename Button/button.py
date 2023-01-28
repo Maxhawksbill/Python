@@ -1,17 +1,19 @@
 from tkinter import *
 
 pro = Tk()
-pro.geometry('200x200')
+pro.title('Nikita')
+pro.geometry('500x500')
 
 def click():
-    print('clicked')
-    pro.geometry('100x100')
+    pro.geometry('200x200')
 
 def close():
     pro.destroy()
 
-bt = Button(text="Button", bg='red', command=click)
-bt.pack()
-bt2 = Button(text='Close', bg = 'blue', command = close)
-bt2.pack(anchor = 'w')
+t1 = Label(text='Nickita Uassya', anchor='c', padx=8, pady=8)
+t1.pack(fill='both', anchor='c', side='top')
+bt = Button(text="Resize", bg='red', compound='top', command=click)
+bt.pack(side='top', padx=8, pady=20)
+bt2 = Button(text='Close', bg='blue', command=close)
+bt2.pack(anchor='c')
 pro.mainloop()
